@@ -28,10 +28,10 @@ export default function FAQ() {
     <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-            <HelpCircle className="text-indigo-600" /> Dúvidas Frequentes
+          <h2 className="text-3xl font-black text-gray-900 mb-4 flex items-center justify-center gap-3 uppercase tracking-tighter">
+            Dúvidas Frequentes
           </h2>
-          <p className="text-gray-500">Respondemos as principais perguntas para sua segurança.</p>
+          <p className="text-gray-500 font-medium">Respondemos as principais perguntas para sua segurança.</p>
         </div>
 
         <div className="space-y-4">
@@ -59,12 +59,12 @@ export default function FAQ() {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6 font-medium">Ainda tem alguma dúvida específica?</p>
-          <a 
-            href="https://wa.me/5511999999999" 
-            className="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all shadow-lg shadow-green-100"
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center gap-3 bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100"
           >
-            <MessageCircle className="w-6 h-6" /> Falar com Suporte no WhatsApp
-          </a>
+            Quero começar agora
+          </button>
         </div>
       </div>
     </section>

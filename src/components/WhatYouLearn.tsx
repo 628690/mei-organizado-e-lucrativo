@@ -2,12 +2,10 @@ import { motion } from 'motion/react';
 import { Target, TrendingUp, ShieldCheck, CreditCard, Users, Zap } from 'lucide-react';
 
 const lessons = [
-  { icon: Target, title: "Organização Prática", desc: "Como organizar seu dinheiro na prática, separando pessoal do profissional." },
-  { icon: TrendingUp, title: "Cálculo de Lucro", desc: "Como saber se você realmente tem lucro ou se está pagando para trabalhar." },
-  { icon: ShieldCheck, title: "Livre de Multas", desc: "Como evitar multas e erros comuns que a maioria dos MEIs comete." },
-  { icon: CreditCard, title: "Guia do DAS", desc: "Como pagar o DAS corretamente e manter sua empresa em dia." },
-  { icon: Zap, title: "Crescimento Seguro", desc: "Como crescer com segurança e planejamento para o futuro." },
-  { icon: Users, title: "Primeiro Funcionário", desc: "Como contratar sem dor de cabeça e cumprir as regras trabalhistas." },
+  { icon: ShieldCheck, title: "Clareza financeira", desc: "Clareza financeira total, sem achismo, sabendo exatamente para onde vai seu dinheiro." },
+  { icon: TrendingUp, title: "Segurança com impostos", desc: "Segurança total com impostos e obrigações, evitando multas e problemas com o governo." },
+  { icon: Zap, title: "Mais controle", desc: "Mais controle e menos estresse no dia a dia do seu negócio." },
+  { icon: Target, title: "Decisões inteligentes", desc: "Tome decisões mais inteligentes e embasadas para o crescimento do seu MEI." },
 ];
 
 export default function WhatYouLearn() {
@@ -15,13 +13,16 @@ export default function WhatYouLearn() {
     <section id="features" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-indigo-600 font-bold uppercase tracking-wider text-sm mb-4">🔥 Conteúdo do Guia</h2>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            O que você vai aprender na prática:
+          <span className="text-indigo-600 font-bold uppercase tracking-wider text-sm mb-4 block">RESULTADOS</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+            O QUE VOCÊ VAI CONSEGUIR
           </h2>
+          <p className="text-xl text-gray-600">
+            Você deixa de “tentar controlar” e passa a ter controle de verdade.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {lessons.map((lesson, index) => (
             <motion.div
               key={index}
@@ -38,6 +39,26 @@ export default function WhatYouLearn() {
               <p className="text-gray-600 leading-relaxed">{lesson.desc}</p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="bg-white rounded-[3rem] p-8 md:p-16 border border-gray-100 shadow-xl">
+           <div className="max-w-4xl mx-auto">
+             <h3 className="text-3xl font-black text-center mb-12 uppercase tracking-tighter">O QUE TEM DENTRO</h3>
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
+                {[
+                  "Controle financeiro simplificado",
+                  "Obrigações do MEI explicadas sem linguagem difícil",
+                  "Como evitar multas e problemas",
+                  "Rotina prática de organização",
+                  "Estratégias para crescer com segurança"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 py-4 border-b border-gray-50 last:border-0 font-medium text-gray-800">
+                    <div className="w-2 h-2 rounded-full bg-indigo-600 shrink-0" />
+                    {item}
+                  </div>
+                ))}
+             </div>
+           </div>
         </div>
       </div>
     </section>

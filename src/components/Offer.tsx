@@ -1,81 +1,137 @@
 import { motion } from 'motion/react';
-import { ShoppingCart, ShieldCheck, Star } from 'lucide-react';
+import { ShoppingCart, ShieldCheck, Star, CheckCircle2 } from 'lucide-react';
 
 export default function Offer() {
   return (
     <section id="pricing" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-indigo-900 rounded-[3rem] p-8 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full blur-3xl opacity-20 -mr-32 -mt-32" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 rounded-full blur-3xl opacity-20 -ml-32 -mb-32" />
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-black text-gray-900 mb-4 uppercase tracking-tighter">INVESTIMENTO</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Um erro no seu MEI pode custar muito mais do que isso. Por menos do que você gasta em um almoço, você pode evitar prejuízos.
+          </p>
+        </div>
 
-            <div className="relative z-10">
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-8 backdrop-blur-sm border border-white/10">
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" /> Oferta Especial de Lançamento
-                </div>
-                
-                <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                  Tudo que você precisa para <br />
-                  <span className="text-indigo-300 font-serif italic text-3xl md:text-5xl">viver tranquilo com seu MEI</span>
-                </h2>
-                
-                <div className="flex flex-col items-center justify-center mb-12">
-                  <span className="text-indigo-200 line-through text-2xl mb-2">De R$ 97</span>
-                  <div className="flex items-start gap-1">
-                    <span className="text-3xl font-bold mt-2">R$</span>
-                    <span className="text-8xl font-black tracking-tighter">37</span>
-                  </div>
-                  <span className="text-indigo-200 font-medium">Pagamento Único. Acesso Vitalício.</span>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-24">
+          {/* Option 1 */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-gray-50 p-8 md:p-12 rounded-[2.5rem] border border-gray-100 flex flex-col"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ebook + Livro Caixa</h3>
+            <div className="mb-8">
+              <span className="text-4xl font-black tracking-tight">R$ 37,00</span>
+            </div>
+            <ul className="space-y-4 mb-10 flex-grow">
+              <li className="flex items-center gap-3 text-gray-700">
+                <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                Guia MEI Organizado e Lucrativo
+              </li>
+              <li className="flex items-center gap-3 text-gray-700">
+                <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                Planilha Livro Caixa Pronta
+              </li>
+            </ul>
+            <button className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100">
+              QUERO ESTA OPÇÃO
+            </button>
+          </motion.div>
 
-                <div className="space-y-4 mb-12 max-w-sm mx-auto text-left bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                  <p className="text-xs uppercase tracking-widest text-indigo-300 font-bold mb-4">Você recebe agora:</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <ShieldCheck className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="font-bold">📘 eBook Completo MEI Lucrativo</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <ShieldCheck className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="font-bold">📊 Planilha Livro Caixa Pronta</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                      <ShieldCheck className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="font-bold">🔒 Garantia de 7 dias ou seu dinheiro de volta</span>
-                  </div>
-                </div>
+          {/* Option 2 */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-indigo-900 p-8 md:p-12 rounded-[2.5rem] text-white flex flex-col relative ring-4 ring-indigo-500/30"
+          >
+            <div className="absolute top-6 right-6 px-3 py-1 bg-indigo-500 rounded-full text-xs font-bold uppercase tracking-widest">Mais Completo</div>
+            <h3 className="text-2xl font-bold mb-4">Pack Completo + Bônus</h3>
+            <div className="mb-8">
+              <span className="text-4xl font-black tracking-tight text-white">R$ 49,90</span>
+            </div>
+            <ul className="space-y-4 mb-10 flex-grow">
+              <li className="flex items-center gap-3 text-indigo-100">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Tudo da opção anterior
+              </li>
+              <li className="flex items-center gap-3 text-indigo-100">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Planilha de custo de funcionário
+              </li>
+              <li className="flex items-center gap-3 text-indigo-100">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Modelos de contratos e recibos
+              </li>
+              <li className="flex items-center gap-3 text-indigo-100">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Documentos editáveis para o dia a dia
+              </li>
+            </ul>
+            <button className="w-full bg-white text-indigo-900 py-5 rounded-xl text-lg font-black hover:bg-indigo-50 transition-all shadow-xl">
+              QUERO O PACK COMPLETO
+            </button>
+          </motion.div>
+        </div>
 
-                <button className="w-full sm:w-auto bg-white text-indigo-900 px-12 py-6 rounded-2xl text-xl font-black hover:bg-gray-100 transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-xl mb-8 group">
-                  <ShoppingCart className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                  QUERO ORGANIZAR MEU MEI AGORA
-                </button>
-
-                <div className="flex items-center justify-center gap-6 opacity-60">
-                  <img src="https://logodownload.org/wp-content/uploads/2016/10/visa-logo-1.png" alt="Visa" className="h-6 object-contain invert brightness-0" />
-                  <img src="https://logodownload.org/wp-content/uploads/2014/07/mastercard-logo-7.png" alt="MasterCard" className="h-6 object-contain invert brightness-0" />
-                  <img src="https://logodownload.org/wp-content/uploads/2015/03/pix-logo-1.png" alt="PIX" className="h-6 object-contain invert brightness-0" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto mb-24">
+          <div className="bg-green-50 p-10 rounded-[3rem] border border-green-100">
+            <h3 className="text-xl font-bold text-green-900 mb-6 uppercase tracking-widest">BÔNUS EXCLUSIVOS</h3>
+            <div className="space-y-4">
+              {[
+                "Planilha de controle financeiro",
+                "Planilha de custo de funcionário",
+                "Modelos de contratos",
+                "Recibos prontos",
+                "Documentos editáveis"
+              ].map((bonus, i) => (
+                <div key={i} className="flex items-center gap-3 text-green-800 font-medium">
+                  <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                  {bonus}
                 </div>
-              </motion.div>
+              ))}
             </div>
           </div>
 
-          <div className="mt-12 text-center p-8 bg-indigo-50 rounded-3xl border border-indigo-100 italic">
-            <p className="text-indigo-900 font-medium text-lg leading-relaxed">
-              🎁 <strong>BÔNUS EXTRA:</strong> E você ainda pode adicionar o <strong>Kit Profissional</strong> com planilhas e modelos prontos diretamente no checkout!
-            </p>
+          <div className="bg-indigo-50 p-10 rounded-[3rem] border border-indigo-100 flex items-center justify-center text-center">
+            <div>
+              <ShieldCheck className="w-16 h-16 text-indigo-600 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 uppercase tracking-tighter">GARANTIA</h3>
+              <p className="text-gray-700 leading-relaxed italic">
+                Se por qualquer motivo você achar que esse material não é pra você, você pode simplesmente não aplicar. O risco de continuar como está é muito maior.
+              </p>
+            </div>
           </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 font-medium">
+          <div className="bg-white p-8 rounded-3xl border border-gray-100">
+            <h4 className="text-indigo-600 mb-4 uppercase tracking-widest text-sm font-black">PRA QUEM É</h4>
+            <ul className="space-y-3 text-gray-700">
+              <li>- Para quem fatura mas não vê o dinheiro</li>
+              <li>- Para quem quer parar de se sentir perdido</li>
+              <li>- Para quem tem medo de errar com o governo</li>
+              <li>- Para quem quer crescer com organização</li>
+            </ul>
+          </div>
+          <div className="bg-white p-8 rounded-3xl border border-gray-100">
+            <h4 className="text-red-500 mb-4 uppercase tracking-widest text-sm font-black">PRA QUEM NÃO É</h4>
+            <ul className="space-y-3 text-gray-700">
+              <li>- Quem não quer mudar nada</li>
+              <li>- Quem não aplica o que aprende</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl font-black mb-8 uppercase tracking-tighter">FINALMENTE NO CONTROLE</h2>
+          <p className="text-xl text-gray-600 mb-10">
+            Você tem duas escolhas agora: continuar como está, sem saber pra onde seu dinheiro vai… ou começar hoje a organizar seu MEI, evitar erros e ter controle de verdade.
+          </p>
+          <button className="bg-indigo-600 text-white px-12 py-6 rounded-2xl text-xl font-black hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-2xl uppercase tracking-tight">
+            QUERO ORGANIZAR MEU MEI AGORA
+          </button>
         </div>
       </div>
     </section>

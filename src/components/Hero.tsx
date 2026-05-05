@@ -18,13 +18,13 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold tracking-wide mb-6">
-              EXCLUSIVO PARA MICROEMPREENDEDORES
+              CONTABILIDADE PARA MEI
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-8">
-              Organize seu MEI, <span className="text-indigo-600">pare de perder dinheiro</span> e evite impostos atrasados
+              Você trabalha, fatura… e mesmo assim o dinheiro do seu MEI some?
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
-              Um guia simples para você controlar seu dinheiro, cumprir obrigações e ter mais lucro — <strong>mesmo sem entender nada de contabilidade.</strong>
+              Aprenda a organizar seu financeiro, evitar erros e parar de perder dinheiro — mesmo sem entender nada de contabilidade.
             </p>
           </motion.div>
 
@@ -41,41 +41,22 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-20 relative max-w-lg mx-auto"
           >
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-500" /> Método Prático
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-500" /> Planilha Inclusa
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-500" /> Acesso Vitalício
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+              <img 
+                src="input_file_0.png" 
+                alt="MEI Organizado e Lucrativo Ebook" 
+                className="relative rounded-[2rem] shadow-2xl w-full h-auto transform transition duration-500 hover:scale-[1.02]"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 relative max-w-4xl mx-auto"
-        >
-          <div className="bg-indigo-50 p-4 sm:p-8 rounded-[3rem] border-2 border-dashed border-indigo-200">
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-white aspect-[16/9] flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="bg-indigo-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-indigo-200">
-                   <Play className="w-8 h-8 fill-white ml-1" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Assista ao Vídeo de Apresentação</h3>
-                <p className="text-gray-500">Descubra em 2 minutos como organizar seu MEI</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

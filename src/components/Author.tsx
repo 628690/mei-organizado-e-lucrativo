@@ -40,23 +40,18 @@ export default function Author() {
             viewport={{ once: true }}
             className="flex-1"
           >
-            <span className="text-indigo-600 font-bold uppercase tracking-wider text-sm mb-4 block">👩💼 Quem é Márcia Reges?</span>
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Especialista em Departamento Pessoal e Apoio ao MEI</h2>
+            <span className="text-indigo-600 font-bold uppercase tracking-wider text-sm mb-4 block">SOBRE</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">Márcia Reges</h2>
             
             <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
+              <p className="text-indigo-600 font-black text-2xl uppercase tracking-tighter">Consultoria Empresarial</p>
               <p>
-                Olá! Eu sou a <strong>Márcia Reges</strong>. Minha missão é transformar a vida de microempreendedores através da organização e clareza.
-              </p>
-              <p>
-                Com anos de experiência prática em Departamento Pessoal, já vi centenas de empreendedores perderem dinheiro por erros simples de contabilidade e falta de controle.
-              </p>
-              <p>
-                Por isso, desenvolvi o método <strong>MEI Organizado e Lucrativo</strong>: para que você foque no que realmente importa — vender e crescer — enquanto eu te ensino a cuidar dos bastidores com segurança.
+                Especialista em Departamento Pessoal, ajudando empreendedores a organizarem seus negócios com clareza, segurança e praticidade.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-gray-900 font-semibold">
                 <div className="flex items-center gap-3">
-                  <Briefcase className="w-5 h-5 text-indigo-600" /> Experiência Prática
+                  <Briefcase className="w-5 h-5 text-indigo-600" /> Consultoria Empresarial
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-5 h-5 text-indigo-600" /> Especialista em DP
